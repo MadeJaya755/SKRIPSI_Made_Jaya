@@ -1,0 +1,231 @@
+/* Background Video */
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  z-index: -1;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 15px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  color: white;
+  backdrop-filter: blur(5px);
+  flex-wrap: wrap;
+}
+
+.navbar-logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.navbar-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navbar-menu li {
+  margin: 0 15px;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Navbar */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start; /* Posisi menu rata kiri */
+    padding: 10px 20px;
+    text-align: left;
+  }
+
+  .navbar-menu {
+      flex-direction: column;
+  }
+
+  .navbar-menu li {
+      margin: 10px 0;
+  }
+
+  .navbar-logo {
+      font-size: 1.4rem; /* Menurunkan ukuran font untuk responsivitas */
+  }
+}
+
+/* Title Section */
+.judul {
+  text-align: center;
+  padding-top: 80px;
+}
+
+.judul h1 {
+  font-size: 2.5rem;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Card Container */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+  margin-top: 80px;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #080808;
+}
+
+.card-content {
+  padding: 20px;
+  color: rgb(8, 8, 8);
+}
+
+.card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Cloud Info Section */
+.cloud-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 50px 0;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.cloud-info.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cloud-info img {
+  width: 45%;
+  border-radius: 12px;
+}
+
+.cloud-text {
+  width: 50%;
+  padding: 20px;
+  color: black;
+}
+
+.cloud-text h2 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  color: black;
+}
+
+.cloud-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Left and Right Image Adjustments */
+.left-img {
+  flex-direction: row;
+}
+
+.right-img {
+  flex-direction: row-reverse;
+}
+
+/* Responsive Design for Cloud Info and Card Section */
+@media screen and (max-width: 576px){
+  .cloud-info {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .cloud-info img {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .cloud-text {
+    width: 100%;
+  }
+
+  /* Pastikan .container adalah pembungkus semua card */
+  .container {
+    display: grid;
+    grid-template-columns: 1fr; /* Satu kolom untuk HP */
+    gap: 20px; /* Jarak antar card */
+    padding: 20px;
+  }
+
+  /* Atur card agar tetap responsif */
+  .card {
+    width: 100%; /* Pastikan card memenuhi lebar container */
+    box-sizing: border-box;
+  }
+
+  .card-content {
+    padding: 10px; /* Mengurangi padding untuk perangkat kecil */
+  }
+
+  .card h2 {
+    font-size: 1.6rem; /* Menyesuaikan ukuran font */
+  }
+
+  .card p {
+    font-size: 0.9rem; /* Mengurangi ukuran font */
+  }
+}
+

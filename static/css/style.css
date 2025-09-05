@@ -1,0 +1,172 @@
+/* Global Reset and Font */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background-color: #e6f0fa;
+}
+
+/* Background Video */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0.5;
+  object-fit: cover;
+  background-color: black;
+  pointer-events: none;
+}
+
+
+
+/* Overlay */
+.overlay {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  min-height: 100vh;
+  animation: fadeIn 2s ease-in;
+}
+
+/* Navbar */
+.navbar {
+  background: rgba(0, 123, 255, 0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease-in-out;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: white !important;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  letter-spacing: 1px;
+}
+
+.nav-link {
+  color: #f8f9fa !important;
+  font-weight: 600;
+  margin: 0 12px;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #ffea00 !important;
+  text-shadow: 0 0 5px #fff;
+}
+
+/* Section Padding */
+.section {
+  padding: 3rem 2rem;
+}
+
+/* Card Styling */
+.card {
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 20px;
+  color: #111;
+  transition: transform 0.4s ease;
+  animation: fadeInUp 1s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-body h5 {
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+/* Image Styling */
+.data-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 14px;
+  object-fit: cover;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  margin: 0 auto 1rem auto;
+  animation: zoomIn 1.2s ease;
+}
+
+/* Titles */
+h2 {
+  font-weight: 800;
+  color: #0c0c0c;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 2rem;
+  animation: fadeInDown 1.2s ease;
+}
+
+/* Chart Card */
+canvas {
+  max-height: 300px;
+}
+
+/* Alert Message */
+.alert {
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive Layout Fix */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.4rem;
+  }
+
+  .section {
+    padding: 2rem 1rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+}
+
+/* Footer (if needed) */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  margin-top: 2rem;
+  border-radius: 12px 12px 0 0;
+  animation: fadeInUp 1s ease;
+}

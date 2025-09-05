@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Cloud Classifier - Jenis Awan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/awan.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Video -->
+    <video autoplay muted loop id="background-video">
+        <source src="{{ url_for('static', filename='video/Langit_cerah.mp4') }}" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-logo">Cuacaku</div>
+        <ul class="navbar-menu">
+          <li><a href="{{ url_for('index') }}">Kondisi Cuaca</a></li>
+          <li><a href="{{ url_for('awan') }}">Keterangan</a></li>
+        </ul>
+    </nav>
+
+    <!-- Judul -->
+    <div class="judul">
+        <h1>Jenis-jenis Awan</h1>
+    </div>
+
+    <!-- Card Container -->
+    <div class="container">
+        <div class="card">
+            <img src="{{ url_for('static', filename='img/cumulonimbus.jpg') }}" alt="Cumulonimbus">
+            <div class="card-content">
+                <h2>Cumulonimbus</h2>
+                <p>Cumulonimbus merupakan awan yang sangat tinggi, besar, dan sering kali menjulang seperti menara dengan puncak menyerupai landasan pesawat (anvil-shaped). Awan ini terbentuk akibat ketidakstabilan udara yang kuat dan mengandung uap air dalam jumlah besar. Cumulonimbus dikenal sebagai pembawa cuaca ekstrem seperti hujan lebat, petir, angin kencang, bahkan tornado. Keberadaannya menandakan potensi badai yang serius dan biasanya terjadi pada sore hari di wilayah tropis.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <h2>Cumulus</h2>
+                <p>Awan cumulus memiliki bentuk khas menyerupai gumpalan kapas putih dengan dasar datar dan puncak mengembang. Awan ini terbentuk akibat pemanasan permukaan bumi dan umumnya muncul pada siang hari saat cuaca cerah. Cumulus biasanya tidak menghasilkan hujan, namun jika berkembang secara vertikal menjadi besar dan tinggi, dapat berubah menjadi cumulonimbus yang berpotensi menimbulkan hujan deras.</p>
+                
+            </div>
+            <img src="{{ url_for('static', filename='img/cumulus.jpg') }}" alt="Cumulus">
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='img/cirrus.jpg') }}" alt="Cirrus">
+            <div class="card-content">
+                <h2>Cirrus</h2>
+                <p>Cirrus adalah awan yang berada di ketinggian lebih dari 6.000 meter dan berbentuk serabut halus menyerupai bulu atau pita panjang. Awan ini terdiri dari kristal es dan tidak menurunkan hujan secara langsung. Cirrus sering kali menjadi indikator awal perubahan cuaca, terutama mendekatnya sistem badai atau front atmosfer, yang menandakan bahwa hujan atau badai mungkin terjadi dalam 12-24 jam ke depan.</p>
+            </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <h2>Stratocumulus</h2>
+            <p>Stratocumulus merupakan awan rendah yang tersebar luas di langit dan tampak seperti lapisan abu-abu tidak merata, kadang diselingi celah sinar matahari. Meskipun tampak tebal dan gelap, awan ini jarang menghasilkan hujan deras, hanya gerimis ringan atau mendung yang berkepanjangan. Stratocumulus sering muncul menjelang senja atau pagi hari dan menjadi tanda atmosfer yang relatif stabil.</p>
+          </div>
+          <img src="{{ url_for('static', filename='img/Stratocumulus.jpg') }}" alt="Stratocumulus" />
+        </div>
+    
+        <div class="card">
+          <img src="{{ url_for('static', filename='img/Nimbostratus.jpg') }}" alt="Nimbostratus" />
+          <div class="card-content">
+            <h2>Nimbostratus</h2>
+            <p>Nimbostratus adalah awan tebal, gelap, dan meluas secara horizontal yang menutupi seluruh langit. Awan ini merupakan pembawa utama hujan yang stabil dan berkepanjangan, baik dalam bentuk hujan deras, salju, maupun hujan es, tetapi tanpa disertai petir. Nimbostratus terbentuk dari penebalan awan stratus atau altostratus dan menjadi penanda cuaca buruk yang menetap.</p>
+          </div>
+        </div>
+    
+        <div class="card">
+          <div class="card-content">
+            <h2>Altocumulus</h2>
+            <p>Altocumulus adalah awan menengah yang tampak seperti kumpulan gumpalan putih atau abu-abu kecil yang tersusun berlapis di ketinggian antara 2.000 hingga 6.000 meter. Awan ini sering membentuk pola seperti sisik ikan dan disebut “mackerel sky.” Altocumulus dapat menjadi tanda bahwa cuaca buruk atau badai akan terjadi dalam beberapa jam ke depan, terutama jika muncul di pagi hari dengan kelembapan tinggi.
+    
+            </p>
+          </div>
+          <img src="{{ url_for('static', filename='img/Altocumulus.jpg') }}" alt="Altocumulus" />
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/awan.js') }}"></script>
+</body>
+</html>
