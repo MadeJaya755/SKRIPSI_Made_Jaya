@@ -40,8 +40,4 @@ Dengan integrasi pemrosesan citra dan antarmuka website, sistem ini mampu member
 
 ---
 
-## 🚀 Cara Menjalankan
-1. Clone repository ini  
-   ```bash
-   git clone https://github.com/MadeJaya755/SKRIPSI_Made_Jaya.git
-   cd SKRIPSI_Made_Jaya
+
